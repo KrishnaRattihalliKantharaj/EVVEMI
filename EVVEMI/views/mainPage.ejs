@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EVVEMI</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="angular/mainPage.js" type="text/javascript"></script>
+</head>
+<body ng-app="myApp" ng-controller="mainController">
+	<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">EVVEMI</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="#">Home</a></li>
+		      <li><a href="#">About Us</a></li>
+		      <li><a href="#">Contact Us</a></li>
+		    </ul>
+             <button class="btn btn-primary navbar-btn navbar-right" style="background-color:transparent;border-color:transparent;color:grey"><%=FacultyName%></button>
+		</div>
+	</nav>
+
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">Course</div>
+              <div class="panel-body">Add a course and its details into the record.
+                <button style="float: right;border-radius:3px"><a href="/addCourse">ADD</a></button> 
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">Add Students</div>
+              <div class="panel-body">Add a student to a course.
+                <button style="float: right;border-radius:3px"><a href="/addStudentDetails">ADD</a></button> 
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">View details</div>
+              <div class="panel-body">View details of all the courses and students enrolled to it.
+                <button style="float: right;border-radius:3px"><a href="/showDetails">View</a></button> 
+              </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="col-sm-1"></div>
+    
+
+</body>
+</html>

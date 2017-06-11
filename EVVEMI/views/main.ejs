@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EVVEMI</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="Angular/signin.js" type="text/javascript"></script>
+</head>
+<body  ng-app="myApp" ng-controller="mainController">
+	<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">EVVEMI</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="#">Home</a></li>
+		      <li><a href="#">About Us</a></li>
+		      <li><a href="#">Contact Us</a></li>
+		    </ul>
+		    <button class="btn btn-primary navbar-btn navbar-right" style="background-color:transparent;border-color:transparent;color:grey"  data-toggle="modal" data-target="#myModal1">Sign In</button>
+		   
+		</div>
+	</nav>
+
+
+		<div class="modal fade" id="myModal1" style="margin-top:50px" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-group">
+                            <input type="text" class="form-control" name="email" placeholder="Email Address" style="margin-top:30px" ng-model="emailAddress"></input>
+                            <input type="password" class="form-control" name="password" placeholder="Password" style="margin-top:10px;margin-bottom:10px" ng-model="password"></input>
+                           <!--  <p style="color:red">{{loginError}}</p> -->
+                            <button class="btn btn-danger" style="width:100%" ng-click="logIn()">Log In</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
