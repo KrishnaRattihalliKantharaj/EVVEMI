@@ -46,8 +46,11 @@ app.post('/courseAdd',course.courseAdd);
 app.post('/studentAdd',student.studentAdd);
 app.post('/details',details.details);
 app.post('/studentDetails',details.studentDetails);
-
 app.post('/courseDetails',details.courseDetails);
+app.post('/deleteStudentRecord',student.deleteStudentRecord);
+app.post('/updateDetails',student.updateDetails);
+app.post('/updateStudentDetails',student.updateStudentDetails);
+
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/success',main.loadMainPage);
@@ -55,6 +58,7 @@ app.get('/addCourse',main.addCourse);
 app.get('/addStudentDetails',main.addStudentDetails);
 app.get('/showDetails',main.showDetails);
 app.get('/loadStudent',details.loadStudent);
+app.get('/getUpdateddetails',student.getUpdateddetails);
 
 
 http.createServer(app).listen(app.get('port'), function(){
