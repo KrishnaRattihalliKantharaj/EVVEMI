@@ -6,7 +6,7 @@ exports.courseAdd = function(request,response){
 	var CourseName = request.body.CourseName;
 	var FacultyName = request.body.FacultyName;
 	var time = request.body.time;
-	var query = "insert into evveme.course (CourseName,FacultyName,time) values "+"('"+CourseName+"','"+FacultyName+"')";
+	var query = "insert into evveme.course (CourseName,FacultyName) values "+"('"+CourseName+"','"+FacultyName+"')";
 	mysql.fetchData(function(err,results){
 		if(err){
 			throw err;

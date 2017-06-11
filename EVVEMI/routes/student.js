@@ -26,3 +26,4 @@ exports.studentAdd = function(request,response){
 		}
 	},query);
 }
+

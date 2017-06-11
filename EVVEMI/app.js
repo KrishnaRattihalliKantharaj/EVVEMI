@@ -10,6 +10,7 @@ var express = require('express')
   , main = require('./routes/main')
   , course = require('./routes/course')
   , student = require('./routes/student')
+  , details = require('./routes/details') 
   , session = require('client-sessions')
   , path = require('path');
 
@@ -43,14 +44,18 @@ if ('development' == app.get('env')) {
 app.post('/signin', main.signin);
 app.post('/courseAdd',course.courseAdd);
 app.post('/studentAdd',student.studentAdd);
+app.post('/details',details.details);
+app.post('/studentDetails',details.studentDetails);
 
-
+app.post('/courseDetails',details.courseDetails);
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/success',main.loadMainPage);
 app.get('/addCourse',main.addCourse);
 app.get('/addStudentDetails',main.addStudentDetails);
 app.get('/showDetails',main.showDetails);
+app.get('/loadStudent',details.loadStudent);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

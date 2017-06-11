@@ -12,10 +12,10 @@ app.controller('mainController',function($scope,$http){
 				"password":$scope.password
 			}
 		}).success(function(data){
-			if(data.result=="200"){
+			if(data.result==="200"){
 				console.log("success login");
 				window.location = "/success";
 			}
 		});
-	}
-})
+	};
+});
