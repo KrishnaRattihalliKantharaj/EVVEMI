@@ -9,6 +9,10 @@
     "express": "3.2.6",
     "client-sessions":"0.8.0",
     "mysql":"2.13.0",
+    "mocha":"3.4.2",
+    "request":"2.81.0",
+    "assert":"1.4.1",
+    "http":"0.0.0",
     "ejs": "*"
   }
 }
